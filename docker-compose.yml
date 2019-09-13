@@ -6,10 +6,10 @@ services:
     container_name: mysql
     hostname: mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=portfolio
-      - MYSQL_USER=portfolio
-      - MYSQL_PASSWORD=portfolio
-      - MYSQL_DATABASE=portfolio
+      - MYSQL_ROOT_PASSWORD=config
+      - MYSQL_USER=config
+      - MYSQL_PASSWORD=config
+      - MYSQL_DATABASE=config
     ports:
       - "3306:3306"
 
@@ -41,10 +41,10 @@ services:
       context: compose/local/django
       dockerfile: Dockerfile
     environment:
-      - MYSQL_ROOT_PASSWORD=portfolio
-      - MYSQL_USER=portfolio
-      - MYSQL_PASSWORD=portfolio
-      - MYSQL_DATABASE=portfolio
+      - MYSQL_ROOT_PASSWORD=config
+      - MYSQL_USER=config
+      - MYSQL_PASSWORD=config
+      - MYSQL_DATABASE=config
     links:
       - mysql:mysql
       - master
