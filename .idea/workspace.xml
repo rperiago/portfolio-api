@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="142d60bd-3e3e-4677-9a44-679deae29f35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/django/Dokerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/migrations.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/nginx/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/sentinel/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/sentinel/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/sentinel/sentinel.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/sentinel/test_sentinel.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/local/wait_mysql.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose/production/startup.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="142d60bd-3e3e-4677-9a44-679deae29f35" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +31,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
+            <state relative-caret-position="1125">
               <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
             </state>
           </provider>
@@ -104,12 +84,6 @@
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="compose" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="compose" type="462c0819:PsiDirectoryNode" />
-              <item name="local" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -153,16 +127,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568406770684</updated>
-      <workItem from="1568406771934" duration="2049000" />
+      <workItem from="1568406771934" duration="2201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2049000" />
+    <option name="totallyTimeSpent" value="2201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
@@ -256,7 +229,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
+        <state relative-caret-position="1125">
           <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
         </state>
       </provider>
