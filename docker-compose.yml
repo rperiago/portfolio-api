@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
 # MYSQL DB
   mysql:
@@ -14,32 +14,33 @@ services:
       - "3306:3306"
 
 # Redis
-  master:
-    image: redis:5.0.5
-  slave:
-    image: redis:5.0.5
-    command: redis-server --slaveof redis-master 6379
-    links:
-      - master:redis-master
-  sentinel:
-    build:
-      context: ./compose/local/sentinel
-      dockerfile: Dockerfile
-    environment:
-      - SENTINEL_DOWN_AFTER=5000
-      - SENTINEL_FAILOVER=5000
-    links:
-      - master:redis-master
-      - slave
+#  master:
+#    image: redis:5.0.5
+#  slave:
+#    image: redis:5.0.5
+#    command: redis-server --slaveof redis-master 6379
+#    links:
+#      - master:redis-master
+#  sentinel:
+#    build:
+#      context: .
+#      dockerfile: ./compose/local/sentinel/Dockerfile
+#    environment:
+#      - SENTINEL_DOWN_AFTER=5000
+#      - SENTINEL_FAILOVER=5000
+#    links:
+#      - master:redis-master
+#      - slave
 
 # Django
-  djangom:
+  django: &django
     restart: always
     container_name: django
     hostname: django
     build:
-      context: compose/local/django
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: portifolio_local_django
     environment:
       - MYSQL_ROOT_PASSWORD=config
       - MYSQL_USER=config
@@ -47,9 +48,9 @@ services:
       - MYSQL_DATABASE=config
     links:
       - mysql:mysql
-      - master
-      - slave
-      - sentinel
+#      - master
+#      - slave
+#      - sentinel
     volumes:
       - .:/usr/src/app/
     expose:
@@ -60,9 +61,9 @@ services:
       - "2005:22"
     command: bash -c "source compose/local/startup.sh"
     depends_on:
-      - master
-      - slave
-      - sentinel
+#      - master
+#      - slave
+#      - sentinel
       - mysql
 
 # Nginx

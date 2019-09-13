@@ -4,9 +4,8 @@ ENV PYTHONUNBUFFERED 1
 
 MAINTAINER	Ricardo Periago	<ricardo.periago@globoesporte.com>
 
-COPY requirements requirements
-
-RUN pip3 install -r requirements/local.txt
+COPY ./requirements /requirements
+RUN pip install -r /requirements/local.txt
 
 RUN sed -i '/jessie-updates/d' /etc/apt/sources.list  # Now archived
 
