@@ -1,12 +1,9 @@
 #!/bin/bash
+set -o errexit
+set -o pipefail
+set -o nounset
 
-python wait_mysql.py
-
-python manage.py collectstatic -c --noinput
-
-python manage.py migrate
-
+python compose/local/wait_mysql.py
 
 
-gunicorn base.wsgi -b 0.0.0.0:8000 --reload --log-level=DEBUG --timeout 2200 -w 4 -k gevent
 

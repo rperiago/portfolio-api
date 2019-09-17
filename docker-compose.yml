@@ -57,7 +57,6 @@ services:
       - "443"
       - "8000"
     ports:
-      - "443:443"
       - "2005:22"
     command: bash -c "source compose/local/startup.sh"
     depends_on:
