@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}User: {{ object.username }}{% endblock %}
+
+{% block content %}
+<div class="container account">
+	<div class="row">
+		<div class="tabcontent col-lg-12 col-12" id="tab-2">
+      {% if object.username %}
+        <h2>Olá {{ object.username }}</h2>
+      {% endif %}
+      {% if object.name %}
+        <p>{{ object.name }}</p>
+      {% endif %}
+      {% if object.picture %}
+        <img src="{{object.picture.url}}" />
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% if object == request.user %}
+  <!-- Action buttons -->
+    <div class="row">
+      <div class="col-sm-12">
+        <a class="btn btn-primary" href="{% url 'users:update' %}" role="button">My Info</a>
+        <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
+        <!-- Your Stuff: Custom user template urls -->
+      </div>
+    </div>
+  <!-- End Action buttons -->
+  {% endif %}
+
+</div>
+
+{% endblock content %}
+

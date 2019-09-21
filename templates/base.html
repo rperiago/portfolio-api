@@ -1,0 +1,65 @@
+{% load static i18n compress %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="fb:app_id" content="SEU ID"/>
+  <meta name="author" content="contato@virtunews.com.br">
+
+  {% block seo %}
+    <title>Periago</title>
+    <meta name="description" content="subtitle">
+    <meta property="og:title" content="title">
+    <meta property="og:description" content="{{ object.subtitle}}"/>
+    <meta property="og:type" content="article" />
+    {% if object.share %}
+      <meta property="og:image" content="image"/>
+      <meta property="og:image:width" content="width">
+      <meta property="og:image:height" content="height">
+    {% else %}
+      <meta property="og:image" content="{{ object.image_header.url}}"/>
+      <meta property="og:image:width" content="{{object.image_header.width}}">
+      <meta property="og:image:height" content="{{object.image_header.height}}">
+     {% endif %}
+  {% endblock seo %}
+
+
+  {% block css %}
+
+
+    <!-- Your stuff: Third-party CSS libraries go here -->
+    {% compress css %}
+      <!-- This file stores project-specific CSS -->
+
+    {% endcompress %}
+  {% endblock %}
+
+</head>
+<body>
+
+
+{% block content %}
+  <h1>Periago</h1>
+{% endblock content %}
+
+
+{% block javascript %}
+
+  <!-- Vendor dependencies bundled as one file-->
+  {% compress js %}
+    <p>externo js</p>
+  {% endcompress %}
+
+
+  <!-- place project specific Javascript in this file -->
+  {% compress js %}
+    <p>Interno js</p>
+  {% endcompress %}
+
+{% endblock javascript %}
+</body>
+</html>
+ 
